@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "J2prAN",
+    "name": "adviseInternalTeam",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "HY7Wm4"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "jRTPT9"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_jRTPT9()}",
+          "value": "=coalesce(@VisitorHoster, @personName)",
+          "property": "user.details.VisitorHost"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "vIgRxx"
+          },
+          "activity": "${SendActivity_vIgRxx()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "FefJil"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://prod-135.westus.logic.azure.com:443/workflows/e33a4c9bb39348bf8096ad7773223eac/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1rmGDI6ZYDO1YY8AMh0WemEkb7-YphuQpMo0ThpLFpk",
+          "body": "${user.details}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Kl9EEk"
+          },
+          "activity": "${SendActivity_Kl9EEk()}"
+        }
+      ]
+    }
+  ],
+  "generator": "adviseInternalTeam.lg",
+  "recognizer": "adviseInternalTeam.lu.qna",
+  "id": "adviseInternalTeam"
+}

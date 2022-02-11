@@ -1,0 +1,48 @@
+{
+  "WelcomeRecepcionist.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us"
+      ],
+      "Cancel": [
+        "CancelDialog.en-us"
+      ],
+      "Help": [
+        "HelpDialog.en-us"
+      ],
+      "getWifiAccess": [
+        "getWifiAccess.en-us"
+      ],
+      "adviseInternalTeam": [
+        "adviseInternalTeam.en-us"
+      ],
+      "InternalAccess": [
+        "InternalAccess.en-us"
+      ]
+    }
+  },
+  "WelcomeRecepcionist.pt-br": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "WelcomeDialog.pt-br"
+      ],
+      "Cancel": [
+        "CancelDialog.pt-br"
+      ],
+      "Help": [
+        "HelpDialog.pt-br"
+      ],
+      "getWifiAccess": [
+        "getWifiAccess.pt-br"
+      ],
+      "adviseInternalTeam": [
+        "adviseInternalTeam.pt-br"
+      ],
+      "InternalAccess": [
+        "InternalAccess.pt-br"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_uHjjSW()
+[Activity
+    Text = ${SendActivity_uHjjSW_text()}
+]
+
+# SendActivity_uHjjSW_text()
+- Hold on tight, I am setting you up ${user.details.name} ! You should receive your credentials in couple seconds !
+# SendActivity_tJUOxq()
+[Activity
+    Text = ${SendActivity_tJUOxq_text()}
+]
+
+# SendActivity_tJUOxq_text()
+- What else I can do for you ? 

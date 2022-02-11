@@ -1,0 +1,57 @@
+
+
+> Imported: 68b329da9893e34099c7d8ad5cb9c940
+
+# TextInput_Response_oblQmi
+> add some expected user responses:
+> - Please remind me to {itemTitle=buy milk}
+> - remind me to {itemTitle}
+> - add {itemTitle} to my todo list
+>
+> entity definitions:
+> @ ml itemTitle
+- I am {NewVisitorFullName=Ewerton Pinheiro}
+- {NewVisitorFullName=Guilherme Assuncao}
+- My name is  {NewVisitorFullName=Brian Jones}
+- I`m  {NewVisitorFullName=Vin Nocella}
+
+# TextInput_Response_77BpyH
+- my name is {NewVisitorFullName = Brian Doucet}
+- I'm {NewVisitorFullName = Guilherme Assuncao}
+- you can call me {NewVisitorFullName = christian brugman}
+- I'm {NewVisitorFullName = scott rames}
+> add few patterns
+- my name is {NewVisitorFullName = Ewerton Pinheiro}
+
+> add entities
+@ml NewVisitorFullName
+# TextInput_Response_pDy0Yn
+
+- {emailaddress = ewermix@hotmail.com}
+- Meu email é {emailaddress = ironmaiden@gmail.com}
+
+> add entities
+@ prebuilt email
+@ml emailaddress
+
+
+# TextInput_Response_v3uahN
+
+- {companyName = NTT}
+- {companyName = Dimension Data}
+- Eu trabalho na {companyName = Dimension Data}
+- Na {companyName = NTT}
+- Minha empresa é {companyName = Facebook}
+> add entities
+
+@ml companyName
+
+# NumberInput_Response_OHWRXn
+
+- {mobilenumber = 551112341234}
+- My email is {mobilenumber = 999123123}
+
+> add entities
+@ prebuilt phonenumber
+@ml mobilenumber
+

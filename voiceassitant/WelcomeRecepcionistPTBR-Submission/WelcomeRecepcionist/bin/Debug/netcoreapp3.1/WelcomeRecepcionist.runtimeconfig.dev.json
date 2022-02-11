@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ewerton.pinheiro\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ewerton.pinheiro\\.nuget\\packages"
+    ]
+  }
+}

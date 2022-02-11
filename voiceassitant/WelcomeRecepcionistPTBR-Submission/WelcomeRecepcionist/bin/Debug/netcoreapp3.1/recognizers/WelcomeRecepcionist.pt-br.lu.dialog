@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_WelcomeRecepcionist",
+  "applicationId": "=settings.luis.WelcomeRecepcionist_pt_br_lu.appId",
+  "version": "=settings.luis.WelcomeRecepcionist_pt_br_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

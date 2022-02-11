@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "J2prAN",
+    "name": "adviseInternalTeam",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "HY7Wm4"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "jRTPT9"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_jRTPT9()}",
+          "value": "=coalesce(@VisitorHoster, @personName)",
+          "property": "user.details.VisitorHost"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "vIgRxx"
+          },
+          "activity": "${SendActivity_vIgRxx()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "FefJil"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://<msflow_adviseinteams>",
+          "body": "${user.details}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Kl9EEk"
+          },
+          "activity": "${SendActivity_Kl9EEk()}"
+        }
+      ]
+    }
+  ],
+  "generator": "adviseInternalTeam.lg",
+  "recognizer": "adviseInternalTeam.lu.qna",
+  "id": "adviseInternalTeam"
+}

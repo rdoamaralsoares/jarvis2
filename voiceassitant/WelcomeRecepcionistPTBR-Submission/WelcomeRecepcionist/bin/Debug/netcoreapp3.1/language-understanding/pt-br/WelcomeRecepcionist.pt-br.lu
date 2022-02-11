@@ -1,0 +1,58 @@
+# Cancel
+- cancelar
+- sair
+- finalizar
+- exit
+- never mind
+- finalizar agora
+- Obrigado
+- Isso é tudo
+
+# Help
+- ligar recepcionista
+- poderia chamar a recepção ?
+- recepcionista
+- ajuda
+
+
+
+# None
+- where is my car?
+- I want to order a pizza
+- place an item on hold
+- Is it going to rain?
+- turn on the lights
+- check my account balance
+- do unicorns really exist
+- duck
+
+# getWifiAccess
+- Acesso ao wifi
+- internet
+- wifi de convidados
+- wifi
+- acesso à internet
+- qual o wifi
+- acesso ao wifi
+- eu gostaria de acesso wifi
+- acesso wifi
+- acesso internet
+# adviseInternalTeam
+- eu tenho uma reunião
+- tenho uma reunião
+- tenho reuniao
+- tenho uma reuniao
+- reuniao com {VisitorHoster = Jesus Gomes}
+- reuniao com {VisitorHoster = Guilherme Assuncao}
+- entrevista
+- entrevista com {VisitorHoster = Ewerton Pinheiro}
+- reunião com {VisitorHoster = Bruce Sa}
+- tenho reunião com {VisitorHoster = John Mayer}
+- eu tenho uma reunião com {VisitorHoster = Vin Nocella}
+> entity definitions:
+@ml VisitorHoster
+# InternalAccess
+- Abrir a porta
+- gostaria de acesso ao escritorio
+- Acesso ao escritorio
+- abra a porta

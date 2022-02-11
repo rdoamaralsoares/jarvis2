@@ -1,0 +1,58 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "3yk4OT",
+    "name": "HelpDialog",
+    "description": "Displays help information about the bot"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qXCGer"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pFMStC"
+          },
+          "activity": "${SendActivity_pFMStC()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "LD7Vat"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://webexapis.com/v1/xapi/command/Dial",
+          "body": {
+            "deviceId": "Y2lzY29zcGFyazovL3VybjpURUFNOnVzLWVhc3QtMl9hL0RFVklDRS84MDU0NGM0MC1iZDZjLTRiOGEtYjI0MS01N2MyM2I3MzRjYmQ=",
+            "arguments": {
+              "Number": "ricardo.a.soares@global.ntt"
+            }
+          },
+          "headers": {
+            "Authorization": "Bearer Zjk0YjVhYTQtYjZmYi00ZmU1LWFiNGUtZTE5OGZhMjJlMmE1MjQzZTQ3NmEtMWY3_PF84_0198f08a-3880-4871-b55e-4863ccf723d5"
+          }
+        },
+        {
+          "$kind": "Microsoft.CancelAllDialogs",
+          "$designer": {
+            "id": "FgoCcZ"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "HelpDialog.lg",
+  "recognizer": "HelpDialog.lu.qna",
+  "id": "HelpDialog",
+  "$Imported": "a1be0cb91341b11b8cd09b0301040284"
+}

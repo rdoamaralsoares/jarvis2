@@ -1,0 +1,9 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_adviseInternalTeam",
+  "recognizers": {
+    "en-us": "adviseInternalTeam.en-us.lu",
+    "": "adviseInternalTeam.en-us.lu",
+    "pt-br": "adviseInternalTeam.pt-br.lu"
+  }
+}

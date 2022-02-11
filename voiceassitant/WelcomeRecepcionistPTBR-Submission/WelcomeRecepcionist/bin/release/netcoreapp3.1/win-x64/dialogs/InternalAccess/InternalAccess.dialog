@@ -1,0 +1,94 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "YHxGCN",
+    "name": "InternalAccess",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "kTMRXv"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "edZIB0"
+          },
+          "condition": "=(user.details.type== \"employee\")",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "5IEA14"
+              },
+              "activity": "${SendActivity_5IEA14()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "LZHZSQ"
+              },
+              "activity": "${SendActivity_LZHZSQ()}"
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "k2te3g"
+              },
+              "resultProperty": "turn.results",
+              "method": "POST",
+              "url": "https://smart-reception.azurewebsites.net/api/ciscoDuoAuthNTT?code=bukB1Hq3Y7tcakxswJMWhYBBvnRBFet6aHK/nweF6iDOBqLF2a8NaA==",
+              "body": "${user.details}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "S9mhkw"
+              },
+              "condition": "=(turn.results.content.status == \"allow\")",
+              "actions": [
+                {
+                  "$kind": "Microsoft.HttpRequest",
+                  "$designer": {
+                    "id": "anEwW4"
+                  },
+                  "resultProperty": "turn.results",
+                  "method": "POST",
+                  "url": "https://prod-120.westus.logic.azure.com:443/workflows/e95de6e932f74b8ebd2d3ddff3cdb571/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=KikpQ6AwSFhcCs4e5TmwU-BTScJ1MsW0Xs16qjENLzU"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "Y0ii95"
+                  },
+                  "activity": "${SendActivity_Y0ii95()}"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "xmMFSj"
+                  },
+                  "activity": "${SendActivity_xmMFSj()}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "InternalAccess.lg",
+  "recognizer": "InternalAccess.lu.qna",
+  "id": "InternalAccess"
+}

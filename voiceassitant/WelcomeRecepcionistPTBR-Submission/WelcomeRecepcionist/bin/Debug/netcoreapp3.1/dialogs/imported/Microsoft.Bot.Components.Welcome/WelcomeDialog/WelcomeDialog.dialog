@@ -1,0 +1,220 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "WelcomeDialog",
+      "description": "Greets new and returning users",
+      "id": "8pOkoq"
+    },
+    "name": "WelcomeDialog"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "id": "tcqJ5M",
+        "name": "BeginDialog"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "SMr1TB"
+          },
+          "method": "GET",
+          "url": "https://ftjjr8hco5.execute-api.sa-east-1.amazonaws.com/version_1/getdetection",
+          "contentType": "application/json",
+          "responseType": "json",
+          "resultProperty": "dialog.api_return",
+          "headers": {
+            "x-api-key": "eRe6PUDJOz6JuJnhnYcfB6kGGFPiEtFo5YiJC2hV"
+          }
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "xtpCOA"
+          },
+          "property": "user.details",
+          "value": "=dialog.api_return.content"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "iOdTVS"
+          },
+          "activity": "${SendActivity_iOdTVS()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "sF0fYv"
+          },
+          "condition": "user.details.knowuser",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "PsAJ3p"
+              },
+              "activity": "${SendActivity_PsAJ3p()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "77BpyH"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "validations": [],
+              "value": "=coalesce(@NewVisitorFullName, @personName)",
+              "property": "user.details.name",
+              "prompt": "${TextInput_Prompt_77BpyH()}"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "pDy0Yn"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "value": "=coalesce(@email, @emailaddress)",
+              "property": "user.details.email",
+              "prompt": "${TextInput_Prompt_pDy0Yn()}"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "v3uahN"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "value": "=coalesce(@companyName)",
+              "property": "user.details.companyname",
+              "prompt": "${TextInput_Prompt_v3uahN()}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "ndVpkO"
+              },
+              "condition": "=(user.details.companyname == \"NTT\")",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "YMdFvM"
+                  },
+                  "property": "user.details.type",
+                  "value": "employee"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "9aHpty"
+                  },
+                  "property": "user.details.type",
+                  "value": "visitor"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "OHWRXn"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.details.mobilenumber",
+              "value": "=coalesce(@mobilenumber, @phonenumber)",
+              "prompt": "${NumberInput_Prompt_OHWRXn()}"
+            },
+            {
+              "$kind": "Microsoft.ConfirmInput",
+              "$designer": {
+                "id": "1Odkp3"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "prompt": "${ConfirmInput_Prompt_1Odkp3()}",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or ",
+                "inlineSeparator": ", "
+              },
+              "property": "dialog.saveInfoConfirmed"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "AFa94P"
+              },
+              "condition": "=dialog.saveInfoConfirmed",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "kBpYNj"
+                  },
+                  "activity": "${SendActivity_kBpYNj()}"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "QjdzgA"
+                  },
+                  "activity": "${SendActivity_QjdzgA()}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ncguVC"
+          },
+          "activity": "${SendActivity_ncguVC()}"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "WelcomeDialog.lg",
+  "id": "WelcomeDialog",
+  "recognizer": "WelcomeDialog.lu.qna",
+  "$Imported": "af4f041fedef6fc782dfdbdc10c87be3"
+}

@@ -1,0 +1,142 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CiscoISE",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "ussviseadmin01.dimensiondata.com:9060",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/ers/config/guestuser": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "CreateNewCredentials",
+        "operationId": "CreateNewCredentials",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "GuestUser": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "name"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "description"
+                    },
+                    "guestType": {
+                      "type": "string",
+                      "description": "guestType"
+                    },
+                    "sponsorUserName": {
+                      "type": "string",
+                      "description": "sponsorUserName"
+                    },
+                    "personBeingVisited": {
+                      "type": "string",
+                      "description": "personBeingVisited"
+                    },
+                    "reasonForVisit": {
+                      "type": "string",
+                      "description": "reasonForVisit"
+                    },
+                    "guestInfo": {
+                      "type": "object",
+                      "properties": {
+                        "userName": {
+                          "type": "string",
+                          "description": "userName"
+                        },
+                        "emailAddress": {
+                          "type": "string",
+                          "description": "emailAddress"
+                        },
+                        "phoneNumber": {
+                          "type": "string",
+                          "description": "phoneNumber"
+                        },
+                        "password": {
+                          "type": "string",
+                          "description": "password"
+                        },
+                        "enabled": {
+                          "type": "boolean",
+                          "description": "enabled"
+                        },
+                        "company": {
+                          "type": "string",
+                          "description": "company"
+                        }
+                      },
+                      "description": "guestInfo"
+                    },
+                    "guestAccessInfo": {
+                      "type": "object",
+                      "properties": {
+                        "validDays": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "validDays"
+                        },
+                        "fromDate": {
+                          "type": "string",
+                          "description": "fromDate"
+                        },
+                        "toDate": {
+                          "type": "string",
+                          "description": "toDate"
+                        },
+                        "location": {
+                          "type": "string",
+                          "description": "location"
+                        },
+                        "ssid": {
+                          "type": "string",
+                          "description": "ssid"
+                        }
+                      },
+                      "description": "guestAccessInfo"
+                    },
+                    "portalId": {
+                      "type": "string",
+                      "description": "portalId"
+                    }
+                  },
+                  "description": "GuestUser"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "undefined": {
+      "type": "basic"
+    }
+  },
+  "security": [],
+  "tags": []
+}

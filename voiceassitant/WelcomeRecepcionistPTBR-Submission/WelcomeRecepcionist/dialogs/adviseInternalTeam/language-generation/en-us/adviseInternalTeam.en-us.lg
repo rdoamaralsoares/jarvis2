@@ -1,0 +1,25 @@
+[import](common.lg)
+
+# TextInput_Prompt_jRTPT9()
+[Activity
+    Text = ${TextInput_Prompt_jRTPT9_text()}
+]
+
+# TextInput_Prompt_jRTPT9_text()
+- Who are you visiting today ?
+- Who are you meeting with ? 
+# SendActivity_vIgRxx()
+[Activity
+    Text = ${SendActivity_vIgRxx_text()}
+]
+
+# SendActivity_vIgRxx_text()
+- Nice, I will ping him right now ! hold on ! 
+# SendActivity_Kl9EEk()
+[Activity
+    Text = ${SendActivity_Kl9EEk_text()}
+]
+
+# SendActivity_Kl9EEk_text()
+- ```While you wait, what else I can do for you ?
+```

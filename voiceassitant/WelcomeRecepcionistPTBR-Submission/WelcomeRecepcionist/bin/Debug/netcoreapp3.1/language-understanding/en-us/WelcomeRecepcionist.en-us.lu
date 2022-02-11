@@ -1,0 +1,62 @@
+# Cancel
+- cancel
+- quit
+- abort
+- exit
+- never mind
+- forget about it
+- just stop already
+- end this now
+- thanks
+- that is all
+
+# Help
+- could you call the recepcionist
+- call recepcionist
+- call to the recepcionist
+- recepcionist
+- additional support
+- I cannot login
+- I cannot open door
+- help
+
+
+
+# None
+- where is my car?
+- I want to order a pizza
+- place an item on hold
+- Is it going to rain?
+- turn on the lights
+- check my account balance
+- do unicorns really exist
+- duck
+
+# getWifiAccess
+- I want to acess wifi
+- internet
+- guest wifi
+- wifi
+- internet access
+- what is the wifi
+- there is any network available
+- I would like to have internet
+
+# adviseInternalTeam
+- I have a meeting
+- I have an appointment 
+- meeting {VisitorHoster = Jesus Gomes}
+- have a meeting with {VisitorHoster = Guilherme Assuncao}
+- Interview
+- interview with {VisitorHoster = Ewerton Pinheiro}
+- meeting {VisitorHoster = Bruce Sa}
+- appointment with {VisitorHoster = John Mayer}
+- I have a meeting with {VisitorHoster = Vin Nocella}
+> entity definitions:
+@ml VisitorHoster
+
+# InternalAccess
+- I would like to access the door
+- I would like to have office access
+- office access
+- open door

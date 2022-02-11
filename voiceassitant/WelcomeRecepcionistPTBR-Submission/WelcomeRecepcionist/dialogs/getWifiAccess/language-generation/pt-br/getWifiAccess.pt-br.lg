@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_uHjjSW()
+[Activity
+    Text = ${SendActivity_uHjjSW_text()}
+]
+
+# SendActivity_uHjjSW_text()
+- Me de um segundo ${user.details.name} enquanto configuro seu acesso ! Voce irá receber as credenciais em alguns segundos.
+# SendActivity_tJUOxq()
+[Activity
+    Text = ${SendActivity_tJUOxq_text()}
+]
+
+# SendActivity_tJUOxq_text()
+- Com o que mais posso te ajudar ?

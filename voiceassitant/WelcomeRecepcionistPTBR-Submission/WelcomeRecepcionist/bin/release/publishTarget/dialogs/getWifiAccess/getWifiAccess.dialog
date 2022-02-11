@@ -1,0 +1,49 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "ieCCQ9",
+    "name": "getWifiAccess",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "l53Vsq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uHjjSW"
+          },
+          "activity": "${SendActivity_uHjjSW()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "sGvMaT"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://prod-164.westus.logic.azure.com:443/workflows/846bc2248743415c908c08f031b5e680/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ud9dT3Pp-mwaovRtUe8VnD4hL3Koz_-Jh8wfy8nYs8o",
+          "body": "${user.details}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "tJUOxq"
+          },
+          "activity": "${SendActivity_tJUOxq()}"
+        }
+      ]
+    }
+  ],
+  "generator": "getWifiAccess.lg",
+  "recognizer": "getWifiAccess.lu.qna",
+  "id": "getWifiAccess"
+}

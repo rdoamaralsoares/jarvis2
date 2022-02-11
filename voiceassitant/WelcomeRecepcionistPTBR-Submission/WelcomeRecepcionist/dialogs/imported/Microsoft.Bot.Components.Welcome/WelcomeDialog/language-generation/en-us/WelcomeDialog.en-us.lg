@@ -1,0 +1,85 @@
+[import](common.lg)
+
+# SendActivity_WelcomeReturningUser_text()
+- 🖐️ Welcome back! How can I help you today?
+- 🖐️ Hello again! What can I help with?
+- 🖐️ Good to see you again. What do you want to do today?
+- 🖐️ Hey, there! Let's get started.
+- 🖐️ Hello again! How can I help?
+
+# SendActivity_WelcomeNewUser_text()
+- 🖐️ Hey, there! How can I help you today?
+- 🖐️ Hi! How can I help?
+- 🖐️ Hello! What do you want to do today?
+
+> Imported: ecb31044e0e5c0b54f49870e6872f158
+# SendActivity_iOdTVS()
+[Activity
+    Text = ${SendActivity_iOdTVS_text()}
+]
+
+# SendActivity_iOdTVS_text()
+- Hey ! Welcome to NTT !
+# SendActivity_PsAJ3p()
+[Activity
+    Text = ${SendActivity_PsAJ3p_text()}
+]
+
+# SendActivity_PsAJ3p_text()
+- oh wow, you again ?! ${user.details.name} you looks good today !
+# TextInput_Prompt_77BpyH()
+[Activity
+    Text = ${TextInput_Prompt_77BpyH_text()}
+]
+
+# TextInput_Prompt_77BpyH_text()
+- that is pleasure to see you here ! before we start, please what is your full name ?
+# TextInput_Prompt_pDy0Yn()
+[Activity
+    Text = ${TextInput_Prompt_pDy0Yn_text()}
+]
+
+# TextInput_Prompt_pDy0Yn_text()
+- ${user.details.name} is a beautiful name ! What is your mail address ?
+# TextInput_Prompt_v3uahN()
+[Activity
+    Text = ${TextInput_Prompt_v3uahN_text()}
+]
+
+# TextInput_Prompt_v3uahN_text()
+- Perfect, and what is yout company ?
+# NumberInput_Prompt_OHWRXn()
+[Activity
+    Text = ${NumberInput_Prompt_OHWRXn_text()}
+]
+
+# NumberInput_Prompt_OHWRXn_text()
+- My last question, what is your mobile number ?
+# SendActivity_ncguVC()
+[Activity
+    Text = ${SendActivity_ncguVC_text()}
+]
+
+# SendActivity_ncguVC_text()
+- Okay, and how I can help you today ?
+# ConfirmInput_Prompt_1Odkp3()
+[Activity
+    Text = ${ConfirmInput_Prompt_1Odkp3_text()}
+]
+
+# ConfirmInput_Prompt_1Odkp3_text()
+- Do you mind if I save your information for a next visit in our office ? 
+# SendActivity_kBpYNj()
+[Activity
+    Text = ${SendActivity_kBpYNj_text()}
+]
+
+# SendActivity_kBpYNj_text()
+- Give me a second while I save your information.. 
+# SendActivity_QjdzgA()
+[Activity
+    Text = ${SendActivity_QjdzgA_text()}
+]
+
+# SendActivity_QjdzgA_text()
+- That is all right ! Thank you !

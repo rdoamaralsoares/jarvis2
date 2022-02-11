@@ -1,0 +1,32 @@
+[import](common.lg)
+
+# SendActivity_5IEA14()
+[Activity
+    Text = ${SendActivity_5IEA14_text()}
+]
+
+# SendActivity_5IEA14_text()
+- ```I am sorry but you are not authorized to acces our office !
+```
+# SendActivity_LZHZSQ()
+[Activity
+    Text = ${SendActivity_LZHZSQ_text()}
+]
+
+# SendActivity_LZHZSQ_text()
+- Perfect ! I am going to send you a push in Cisco DUO !
+# SendActivity_Y0ii95()
+[Activity
+    Text = ${SendActivity_Y0ii95_text()}
+]
+
+# SendActivity_Y0ii95_text()
+- Perfect, you should have access now !!!
+# SendActivity_xmMFSj()
+[Activity
+    Text = ${SendActivity_xmMFSj_text()}
+]
+
+# SendActivity_xmMFSj_text()
+- ```wops ! I was not able to validade your access..
+```

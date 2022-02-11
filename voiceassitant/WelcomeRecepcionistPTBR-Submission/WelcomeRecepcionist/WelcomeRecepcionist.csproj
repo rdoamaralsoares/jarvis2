@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <UserSecretsId>99bed0ac-66e1-4427-8511-de45cfbaf0a7</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.blu;**/*.dialog;**/*.lg;**/*.lu;**/*.model;**/*.onnx;**/*.qna;**/*.txt" Exclude="$(BaseOutputPath)/**;$(BaseIntermediateOutputPath)/**;wwwroot/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bot.Builder.Community.Components.Adapters.ActionsSDK" Version="4.13.2" />
+    <PackageReference Include="Bot.Builder.Community.Components.Adapters.Alexa" Version="4.13.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.15.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.15.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="4.15.0" />
+    <PackageReference Include="Microsoft.Bot.Components.HelpAndCancel" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Bot.Components.Welcome" Version="1.2.0" />
+  </ItemGroup>
+</Project>

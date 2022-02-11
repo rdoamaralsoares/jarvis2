@@ -1,0 +1,9 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "QnA_WelcomeRecepcionist",
+  "recognizers": {
+    "en-us": "WelcomeRecepcionist.en-us.qna",
+    "": "WelcomeRecepcionist.en-us.qna",
+    "pt-br": "WelcomeRecepcionist.pt-br.qna"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "ieCCQ9",
+    "name": "getWifiAccess",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "l53Vsq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uHjjSW"
+          },
+          "activity": "${SendActivity_uHjjSW()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "sGvMaT"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://<msflow_wifi>",
+          "body": "${user.details}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "tJUOxq"
+          },
+          "activity": "${SendActivity_tJUOxq()}"
+        }
+      ]
+    }
+  ],
+  "generator": "getWifiAccess.lg",
+  "recognizer": "getWifiAccess.lu.qna",
+  "id": "getWifiAccess"
+}

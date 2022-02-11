@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_5IEA14()
+[Activity
+    Text = ${SendActivity_5IEA14_text()}
+]
+
+# SendActivity_5IEA14_text()
+- Me desculpe, mas voce não esta autorizado a acesso ao escritorio !
+# SendActivity_LZHZSQ()
+[Activity
+    Text = ${SendActivity_LZHZSQ_text()}
+]
+
+# SendActivity_LZHZSQ_text()
+- Perfeito ! estou te enviando uma notificação no Cisco DUO
+# SendActivity_Y0ii95()
+[Activity
+    Text = ${SendActivity_Y0ii95_text()}
+]
+
+# SendActivity_Y0ii95_text()
+- Show, a porta irá abrir agora para voce.
+# SendActivity_xmMFSj()
+[Activity
+    Text = ${SendActivity_xmMFSj_text()}
+]
+
+# SendActivity_xmMFSj_text()
+- ops, não consigo te autorizar agora

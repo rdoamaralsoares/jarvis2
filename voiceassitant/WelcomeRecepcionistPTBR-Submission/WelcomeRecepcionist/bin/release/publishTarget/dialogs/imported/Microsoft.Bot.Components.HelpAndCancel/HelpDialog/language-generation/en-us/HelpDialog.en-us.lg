@@ -1,0 +1,20 @@
+[import](common.lg)
+
+# SendActivity_HelpOverview()
+[Activity
+    Text = ${SendActivity_HelpOverview_text()}
+]
+
+# SendActivity_HelpOverview_text()
+- I'm here to help with simple asks. I'm just a basic bot for now. 
+- I'm a simple bot, I can help you with minimal requests. 
+- For now, I can only help you with simple questions.
+
+> Imported: 95949fcc5eb2077f9cffd10817a11340
+# SendActivity_pFMStC()
+[Activity
+    Text = ${SendActivity_pFMStC_text()}
+]
+
+# SendActivity_pFMStC_text()
+- Absolutely ! One of my friends will be with you soon to help !
