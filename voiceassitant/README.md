@@ -17,3 +17,9 @@ Microsoft Flow custom connector, required to be able to communicate with the int
 
 ## duo_api_nodejs
 Azure Function responsible for forwarding requests to Cisco DUO
+
+# Creator
+
+Name: Ewerton Pinheiro
+
+E-mail: ewerton.pinheiro@global.ntt
